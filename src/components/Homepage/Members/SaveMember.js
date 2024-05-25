@@ -4,23 +4,26 @@ import * as Yup from 'yup';
 import { saveMember, fetchTrainers } from '../../../services/api'; // Ensure fetchTrainers is correctly implemented
 import MemberHeader from './MemberHeader';
 import './SaveMember.css';
+import { useSelector } from 'react-redux';
 
 const SaveMember = () => {
   const [successMessage, setSuccessMessage] = useState('');
-  const [trainers, setTrainers] = useState([]);
+  // const [trainers, setTrainers] = useState([]);
 
-  useEffect(() => {
-    const loadTrainers = async () => {
-      try {
-        const response = await fetchTrainers();
-        setTrainers(response);
-      } catch (error) {
-        console.error('Error fetching trainers:', error);
-      }
-    };
+  const trainers = useSelector((state)=> state.trainers);
 
-    loadTrainers();
-  }, []);
+  // useEffect(() => {
+  //   const loadTrainers = async () => {
+  //     try {
+  //       const response = await fetchTrainers();
+  //       setTrainers(response);
+  //     } catch (error) {
+  //       console.error('Error fetching trainers:', error);
+  //     }
+  //   };
+
+  //   loadTrainers();
+  // }, []);
 
   const validationSchema = Yup.object({
     name: Yup.string().required('Name is required'),

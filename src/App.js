@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import SignUp from './components/SignUp_Login/SignUp';
@@ -13,8 +13,28 @@ import MemberHome from './components/Homepage/Members/MemberHome';
 import TrainerHome from './components/Homepage/Trainers/TrainerHome'; 
 import SaveTrainer from './components/Homepage/Trainers/SaveTrainer';
 import UpdateMember from './components/Homepage/Members/UpdateMember';
+import { fetchTrainers } from './services/api';
+import { useDispatch } from 'react-redux';
+import { updateTrainers } from './store/trainerReducer';
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  const handleFetchTrainersData = async () => {
+    try {
+      const response = await fetchTrainers();
+      dispatch(updateTrainers(response));
+    } catch (error) {
+      console.error('Error fetching trainers:', error);
+    }
+  }
+
+  useEffect(()=>{
+    handleFetchTrainersData();
+  },[])
+
+
   return (
     <Router>
       <div className="App">
