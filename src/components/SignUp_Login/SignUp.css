@@ -1,0 +1,104 @@
+/* SignUp.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.signup-container {
+    display: flex;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    width: 100vw;
+    margin: 0;
+}
+
+.left-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9); /* Transparent black background */
+}
+
+.logo {
+    width: 400px; /* Adjust the width of the logo */
+    height: auto;
+    background: rgba(10, 2, 61, 0.244); /* Transparent black background */
+    padding: 0px; /* Add padding to create space around the logo */
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('image5.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.signup-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-form .login-link {
+    color: #03033e; 
+}
+
+.signup-form .login-link:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #03033e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #050575;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.success {
+    color: green;
+    font-size: 12px;
+    margin-top: 5px;
+}

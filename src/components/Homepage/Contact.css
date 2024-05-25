@@ -1,0 +1,19 @@
+.contact-container {
+    position: relative;
+    background: url('image3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    height: 100vh;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.); /* Adjust transparency here */
+    padding: 20px;
+    max-width: 400px; /* Adjust as needed */
+    text-align: center;
+    border-radius: 10px;
+}

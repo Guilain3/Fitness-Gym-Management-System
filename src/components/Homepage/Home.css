@@ -1,0 +1,106 @@
+/* Resetting default browser styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Muli", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header styles */
+.menu-header {
+    background-color: #03033e;
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 20px;
+    font-size: 17px;
+    font-family: "Oswald", sans-serif;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* Menu styles */
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.menu ul li {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #03033e;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #050575;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Main content container */
+.home-container {
+    position: relative;
+    background: url('image6.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Welcome message styles */
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency here */
+    padding: 20px;
+    max-width: 400px; /* Adjust as needed */
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Text styles */
+h1 {
+    margin: 0;
+    color: #111111;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+}
+
+p {
+    font-size: 14px;
+    font-family: "Muli", sans-serif;
+    color: #111111;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+}
+
+/* Links styles */
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}

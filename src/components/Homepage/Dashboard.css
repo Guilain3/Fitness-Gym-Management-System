@@ -1,0 +1,41 @@
+.dashboard-container {
+        position: relative;
+        background: url('image5.jpg') no-repeat center center fixed;
+        background-size: cover;
+        padding: 20px;
+        height: 100vh;
+    }
+
+    .welcome-message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency here */
+        padding: 20px;
+        max-width: 400px; /* Adjust as needed */
+        text-align: center;
+        border-radius: 10px;
+    }
+
+
+.button-container {
+    margin-top: 20px;
+}
+
+.dashboard-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #03033e;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button:hover {
+    background-color: #050575;
+}
